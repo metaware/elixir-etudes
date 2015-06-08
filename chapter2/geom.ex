@@ -12,9 +12,19 @@ defmodule Geom do
     both arguments is 1.
   """
 
-  def area(x \\ 1, y \\ 1) do
+  def area(:rectangle, x, y) do
     x*y
   end
+
+  def area(:triangle, x, y) do
+    (x*y)/2.0
+  end
+  
+
+  def area(:ellipse, x, y) do
+    :math.pi() * x * y
+  end
+  
   
 
 end
